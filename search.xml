@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>搭建个人博客没有那么难！|详细教程|hexo框架|github|</title>
+    <url>/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/</url>
+    <content><![CDATA[<h1 id="搭建个人博客没有那么难！-详细教程-hexo框架-github"><a href="#搭建个人博客没有那么难！-详细教程-hexo框架-github" class="headerlink" title="搭建个人博客没有那么难！|详细教程|hexo框架|github|"></a>搭建个人博客没有那么难！|详细教程|hexo框架|github|</h1><p>​        </p>
+<p>​        大家一定见过网上一些人的博客，自己一定也多少心里不情想，自己要是也有一个漂亮的博客要多好。我也是这样，所以在自己的博客搭建好后，我第一想的是把自己经验也好，主要是<strong>经历</strong>分享给大家！（因为踩了不好坑）</p>
+<p>​        首先本不打算多説，但我想想还有必要的，告诉一下大家为什么要有自己的博客。对于从事计算机行业的人来説有一个自己的博客十分重要（特别是前端），当我们在投简历的时候，它是我们的排面，一个人的写照，在面试时我们的时间是有限，有时候我们可能不能让面官正确了解到自己，所以如果你要是有一个博客就好了，我们可以把它写在简历里（这在面试时是十分加分的），我们可以在自己博客里写自己的技术向博文也好，甚至是学习笔记也可以，重要的是让别人可以了解到你！</p>
+<p>​        如果你不和计算机行业相关，有一个自己博客也不失为一件<strong>炫酷</strong>的事。废话到这，下面是具体的教程。（本人用是<strong>hexo框架</strong>，我也推荐大家使用，因为用它的人多，有什么问题也很好从网上查到）</p>
+<h2 id="我们要做几件事"><a href="#我们要做几件事" class="headerlink" title="我们要做几件事"></a>我们要做几件事</h2><ol>
+<li>下载搭建博客必要的软件。</li>
+<li>在自己的电脑上建立<strong>本地博客</strong>。</li>
+<li>把个人博客部署到<strong>远端服务器</strong>。</li>
+</ol>
+<h2 id="一、-前期准备工作（下载工具等）"><a href="#一、-前期准备工作（下载工具等）" class="headerlink" title="一、 前期准备工作（下载工具等）"></a>一、 前期准备工作（下载工具等）</h2><ol>
+<li>下载node.js</li>
+<li>下载git</li>
+<li>有一个github帐号</li>
+</ol>
+<h3 id="下载node-js"><a href="#下载node-js" class="headerlink" title="下载node.js"></a>下载node.js</h3><p>​        直接从官网下载就可以。<a href="https://nodejs.org/en/">https://nodejs.org/en/</a></p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_09-25-16.png"></p>
+<p>​        安装十分简单，我们采取<strong>傻瓜式安装</strong> ，一直下一步。</p>
+<p>​        安装好后，我们也可以用node -命令来查看自己是否安装成功。</p>
+<p>我们打开cmd(win+r 输入cmd回车)查看。(我的电脑用的是windows,苹果和用Linux的小伙伴的代码和我的略有不同，可以自己查下)之后的代码也是在cmd里操作的。</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_09-34-57.png"></p>
+<h3 id="下载git工具"><a href="#下载git工具" class="headerlink" title="下载git工具"></a>下载git工具</h3><p>同样我们也是在官网下载，<a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
+<p>直接下一步式安装 。</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_16-12-47.png"></p>
+<p>很简单，这里就不多赘述了，安装好后右击就多了git的几个选项。</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_16-26-40.png"></p>
+<h3 id="注册github帐号"><a href="#注册github帐号" class="headerlink" title="注册github帐号"></a>注册github帐号</h3><p>​        官网：<a href="https://github.com/">https://github.com/</a></p>
+<p>注册帐号大家一定也是很常做了，我就不多説了，github有时很慢 ，注册时注意一下。</p>
+<p>有算是有纯开然小白，上网查一下也就可以搞定的。</p>
+<h2 id="二、本地部署博客"><a href="#二、本地部署博客" class="headerlink" title="二、本地部署博客"></a>二、本地部署博客</h2><p>首先我们使用<strong>npm</strong>（包管理工具）来安装淘宝的镜像源，我们还是在cmd里输入</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.toobao.org</span><br></pre></td></tr></table></figure>
+
+
+
+<p>下载可能有点慢 ，不用急，你没卡！</p>
+<p>同样你可以用<strong>cnpm -v</strong>(只要出现版本号就是成功了)检查下载是否成功。</p>
+<p>现在我们就可以来安装hexo框架</p>
+ <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p> hexo -v检查</p>
+<p>​        现在可以本地搭建了，我们在自己的电脑根目录（如果你有多个 硬盘不固定是那个盘）下建立blog文件夹（位置，名字不是固定，也不建议改），我们之后的一切操作将在blog文件夹下进行。</p>
+<p>​        这里我在c盘下建立</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_09-58-33.png"></p>
+<h4 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a><strong>初始化博客</strong></h4><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<p>当出现start blogging with Hexo!我们就是初始化成功了、。</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_10-01-00.png"></p>
+<p>我们的初始blog里有这些文件。</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_11-10-22.png"></p>
+<p>可能 有些小伙伴不太清楚我们的<strong>部署命令</strong>，我在这简单説下 ,这下面的几行命令是我们在使用博客会常常用到的</p>
+<ol>
+<li> hexo  clean         // 用来<strong>清理博客</strong>（用在生成前）</li>
+<li>hexo  g                //  用来生成博客（我们配置了本地文件后，例如改了配置，修改了主题什么的，我们必须要生成一下，才可以用 hexo s 预览）</li>
+<li> hexo s           // 用于<strong>本地预览博客</strong>（在推到远端前的预览，每次都到远端看结果会很不方便）</li>
+<li> hexo d        // 把我们本地调试好的博客<strong>部署到服务器</strong>（这就是正式上线了）</li>
+</ol>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_10-06-01.png"></p>
+<p>我们可以用本地的4000端口访问博客。（在浏览器里输入<a href="http://localhost:4000/">http://localhost:4000</a>）</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_10-09-09.png"></p>
+<p>​        </p>
+<p>打开后是不是很激动我们的博客有界面了！！！哈哈，后面还有很多工作，但有了一个界面还有很高兴的。这就是我们的初始界面，还没有主题，有了主题后会很漂亮的。</p>
+<p> 好，我们ctrl+c断开我们的博客，开始后来的。</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_10-13-09.png"></p>
+<h2 id="三、把本地博客部署到远端"><a href="#三、把本地博客部署到远端" class="headerlink" title="三、把本地博客部署到远端"></a>三、把本地博客部署到远端</h2><p>​        我们借用github的服务器，把博客搭建在github上。</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_10-23-38.png"></p>
+<p>登入自己刚刚建立的帐号。这里我就用我自己的帐号作为例子，就不新建立 了。</p>
+<p>新建一个仓库作为搭建博客的容器</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_10-24-32.png"></p>
+<p>** 仓库的名字<strong>一定要是自己github名字</strong>（xxxx.github.io），我们要通过这个名字访问我们的网址。我这里是crosscloudmoon.github.io</p>
+<p>我用demo这个名字给大家演示。</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_10-30-16.png"></p>
+<p>建立 好后是这个样子的，仓库里还没有东西是一个空仓库</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_10-39-19.png"></p>
+<p>我们生成了一个网址一会要用到，仓库先放着，我们来进行之后的步骤。</p>
+<p>github是基于git的网站，所以我们要使用git来使用github。</p>
+<p>我们来安装下git的插件，回到cmd</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p>可能 有一些<strong>warn 警告</strong>不用在意，不影响我们的操作。</p>
+<p>我们dir看一下</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_10-48-26.png"></p>
+<p>我们打开**_config.yml**，你电脑上装了vim之类的编辑工具可以用，我这里用vscode打开。</p>
+<p>我们需要配置config文件，在文档末写入以下命令。</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_10-57-09.png"></p>
+<p>** type,repo,branch关键字一定要有一个空格，要用单引号’’把内容包起来。</p>
+<p>保存后，关闭。</p>
+<h3 id="配置ssh密钥"><a href="#配置ssh密钥" class="headerlink" title="配置ssh密钥"></a>配置ssh密钥</h3><p>​        这个是我们使用git与<strong>github仓库</strong>关联的重要工序。不配置ssh我们的就没法与我们的远程服务器关联。</p>
+<h4 id="生成ssh-key"><a href="#生成ssh-key" class="headerlink" title="生成ssh key"></a>生成ssh key</h4><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮件地址@youremail.com&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>你会看见这几行字</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;邮件地址@youremail.com&quot; // 你注册github的邮箱， 注意是大写C。</span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):  // 这里是让设置你的路径我们直接回车，默认就好</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>系统会让你输入密码，我这<strong>推荐为空</strong>，因为每次上传到远端它都会让你转入密码，会有点不方便，当然你也可以设置。我这里就不设了，直接回车。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase):&lt;设置密码&gt;</span><br><span class="line">Enter same passphrase again:&lt;再次输入密码&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>出现了这个 ，你的密钥就建立成功了</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_16-43-07.png"></p>
+<h4 id="关联SSH-key到github"><a href="#关联SSH-key到github" class="headerlink" title="关联SSH key到github"></a>关联SSH key到github</h4><p>在本地找到id_rsa.pub文件，C:\Users\你的用户\.ssh下</p>
+<p>打开文件把内容全部复制</p>
+<p>到github的设置</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_16-50-15.png"></p>
+<p>找到ssh</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_16-50-49.png"></p>
+<p>建立一个key</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_16-51-25.png"></p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_16-52-42.png"></p>
+<h4 id="设置用户信息"><a href="#设置用户信息" class="headerlink" title="设置用户信息"></a>设置用户信息</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;...&quot;//输入注册时的username</span><br><span class="line">git config --global user.email  &quot;...@xxx.com&quot;//填写注册邮箱</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><strong>SSH Key配置完成了</strong></p>
+<p>我们用<strong>hexo d</strong> 把博客推到远端。</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_11-05-00.png"></p>
+<p>因为我不是第一次使用，直接就上传了，如果你是第一次上传，它会让输入用户，密码（就是我们建立github帐号用户密码）。</p>
+<p>我们回到<strong>github刷新</strong>一下，发现我们的仓库多了东西，有了许多文件。</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_11-11-51.png"></p>
+<p>就是我们的本地文件。现在就可以在网上访问我们的网页了。</p>
+<p>在浏览器中输入我们的网址。我这里是<a href="https://crosscloudmoon.github.io/">https://crosscloudmoon.github.io/</a></p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_11-17-42.png"></p>
+<p>打开后是可以在网上访问的，我的界面可能和你的不太一样，因为我换了主题，hexo默认的主题为<strong>landscape</strong>，我的是butterfly。这是主题也是很 漂亮 的，我也很喜欢。</p>
+<h2 id="下面我教大家如何更换主题。"><a href="#下面我教大家如何更换主题。" class="headerlink" title="下面我教大家如何更换主题。"></a>下面我教大家如何更换主题。</h2><p>​        换主题其实就是把github上的开源项目clone到我们自己的项目上。</p>
+<p>​        <a href="https://github.com/jerryc127/hexo-theme-butterfly/tree/dev">https://github.com/jerryc127/hexo-theme-butterfly/tree/dev</a></p>
+<p>这个是<strong>butterfly主题</strong>的开源地址，我使用的这个主题，大家也可以自己到网上找开源项目来下载。</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/jerryc127/hexo-theme-butterfly/<span class="built_in">tree</span>/dev.git themes/butterfly</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>** clone如果很慢 ，甚至出错的可以直接下载压缩包后解压到自己的blog目录。</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_15-49-10.png"></p>
+<p>出现了这个明显的字样，你就下载成功了。</p>
+<p>现在要修改config文件为butterfly主题，打开刚刚配置过的_config.yml</p>
+<p><img src="/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/Snipaste_2021-06-02_15-53-12.png"></p>
+<p>我们清理下</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<p>之后我们生成一下</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>本地预览一下</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li></li>
+</ol>
+<p>好，大功告成，这样我们的博客就正式上线，还有了主题。</p>
+]]></content>
+  </entry>
+</search>

@@ -6,7 +6,7 @@
   <link href="http://crosscloudmoon.github.io/atom.xml" rel="self"/>
   
   <link href="http://crosscloudmoon.github.io/"/>
-  <updated>2021-06-03T11:21:33.971Z</updated>
+  <updated>2021-06-05T02:07:57.587Z</updated>
   <id>http://crosscloudmoon.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>demo</title>
+    <link href="http://crosscloudmoon.github.io/2021/06/04/demo/"/>
+    <id>http://crosscloudmoon.github.io/2021/06/04/demo/</id>
+    <published>2021-06-04T04:10:43.000Z</published>
+    <updated>2021-06-05T02:07:57.587Z</updated>
+    
+    <content type="html"><![CDATA[<p><video src="http://qu63zmqgg.hb-bkt.clouddn.com/%E8%A2%AB%E6%84%9F%E5%8A%A8%E7%9A%84c.c20191209_144154_Trim.mp4" controls preload="metadata" width="100%" loop></video></p><p><a href="http://qu63zmqgg.hb-bkt.clouddn.com/%E8%A2%AB%E6%84%9F%E5%8A%A8%E7%9A%84c.c20191209_144154_Trim.mp4" download="./video/被感动的c.c20191209_144154_Trim.mp4">downloadvideo</a></p><p><a href="http://qu63zmqgg.hb-bkt.clouddn.com/qu63zmqgg.hb-bkt.clouddn.com/video/%E8%A2%AB%E6%84%9F%E5%8A%A8%E7%9A%84c.c20191209_144154_Trim.mp4">download</a></p><p><a href="../cdn/file/初始化.txt">txt</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;video src=&quot;http://qu63zmqgg.hb-bkt.clouddn.com/%E8%A2%AB%E6%84%9F%E5%8A%A8%E7%9A%84c.c20191209_144154_Trim.mp4&quot; controls preload=&quot;metada</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>搭建个人博客没有那么难！|详细教程|hexo框架|github|</title>

@@ -1,6 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>demo</title>
+    <url>/2021/06/04/demo/</url>
+    <content><![CDATA[<p><video src="http://qu63zmqgg.hb-bkt.clouddn.com/%E8%A2%AB%E6%84%9F%E5%8A%A8%E7%9A%84c.c20191209_144154_Trim.mp4" controls preload="metadata" width="100%" loop></video></p>
+<p><a href="http://qu63zmqgg.hb-bkt.clouddn.com/%E8%A2%AB%E6%84%9F%E5%8A%A8%E7%9A%84c.c20191209_144154_Trim.mp4" download="./video/被感动的c.c20191209_144154_Trim.mp4">downloadvideo</a></p>
+<p><a href="http://qu63zmqgg.hb-bkt.clouddn.com/qu63zmqgg.hb-bkt.clouddn.com/video/%E8%A2%AB%E6%84%9F%E5%8A%A8%E7%9A%84c.c20191209_144154_Trim.mp4">download</a></p>
+<p><a href="../cdn/file/初始化.txt">txt</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>hexo框架&quot;踩坑&quot;大合集</title>
+    <url>/2021/06/03/hexo%E6%A1%86%E6%9E%B6%E2%80%9D%E8%B8%A9%E5%9D%91%E2%80%9C%E5%A4%A7%E5%90%88%E9%9B%86/</url>
+    <content><![CDATA[<h1 id="hexo框架”踩坑“大合集"><a href="#hexo框架”踩坑“大合集" class="headerlink" title="hexo框架”踩坑“大合集"></a>hexo框架”踩坑“大合集</h1><p>​        这里是我在搭建个人博客到遇到的一些问题，因为是自己也是从网上学习研究的，所以遇到了不少奇奇怪怪的问题，在这里总结一下，可能对你有帮助。</p>
+<h2 id="一、-ERROR-Deployer-not-found-git"><a href="#一、-ERROR-Deployer-not-found-git" class="headerlink" title="一、 ERROR Deployer not found: git"></a>一、 ERROR Deployer not found: git</h2><p>​        没有在自己的博客安装git插件的问题。只安装了git工具软件还不够，我们的博客的环境里也一定要有git插件。</p>
+<p>​        我们只要在自己的博客目录下。</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p>就可以。</p>
+<h2 id="二、-No-such-file-or-directory-和"><a href="#二、-No-such-file-or-directory-和" class="headerlink" title="二、 No such file or directory 和"></a>二、 No such file or directory 和</h2><h2 id="fatal-Could-not-read-from-remote-repository"><a href="#fatal-Could-not-read-from-remote-repository" class="headerlink" title="fatal: Could not read from remote repository"></a>fatal: Could not read from remote repository</h2><h4 id="问题原因："><a href="#问题原因：" class="headerlink" title="问题原因："></a>问题原因：</h4><p>出现这错误一般是以下两种原因：</p>
+<ul>
+<li><p>客户端与服务端未生成 ssh key</p>
+</li>
+<li><p>客户端与服务端的ssh key<strong>不匹配</strong></p>
+</li>
+</ul>
+<p>​        这两个都是我们的ssh密钥出了问题（当你配置多个密钥或误操作很常见），我们在第一次在配置ssh时也出现了这个，也就是说我们没有可以用的密钥，所以我们解决的方法也很明确了，我们把旧的密钥删除掉，重新配置ssh。C:\Users\你的用户\.ssh下的文件删除（如果你有多个密钥注意只把有问题的密钥删除），如果你没有改名字默认是这几个</p>
+<p><img src="/2021/06/03/hexo%E6%A1%86%E6%9E%B6%E2%80%9D%E8%B8%A9%E5%9D%91%E2%80%9C%E5%A4%A7%E5%90%88%E9%9B%86/Snipaste_2021-06-03_09-45-21.png"></p>
+<p>​        我们把前两个删除就可以（只有一个密钥时可以三个都删除，known_hosts在建立 密钥时会自动生成）之后就是</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;your_email@youremail.com</span><br></pre></td></tr></table></figure>
+
+<p>重新建立ssh。 密钥的设置方法详见我的<strong>博文</strong>   <a href="https://crosscloudmoon.github.io/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/">搭建个人博客没有那么难！|详细教程|hexo框架|github|</a>里的关于ssh的内容。</p>
+<h2 id="三、extends-includes-layout-pug-block-content-recent-posts-recent-posts-include-includes-recent-posts-pug-include-includes-pagination-pug"><a href="#三、extends-includes-layout-pug-block-content-recent-posts-recent-posts-include-includes-recent-posts-pug-include-includes-pagination-pug" class="headerlink" title="三、extends includes/layout.pug block content #recent-posts.recent-posts include includes/recent-posts.pug include includes/pagination.pug"></a>三、extends includes/layout.pug block content #recent-posts.recent-posts include includes/recent-posts.pug include includes/pagination.pug</h2><p>​        在本地预览时浏览器里出现了这个，可能是我们的博客在本地渲染时出了问题，解决方法也很简单，我们安装一些在浏览器里预览的插件。</p>
+<p>​        在我们的博客目录下</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive</span><br></pre></td></tr></table></figure>
+
+<p>​    安装后，我们以后修改保存后就可以使用插件实时本地预览，</p>
+<p><img src="/2021/06/03/hexo%E6%A1%86%E6%9E%B6%E2%80%9D%E8%B8%A9%E5%9D%91%E2%80%9C%E5%A4%A7%E5%90%88%E9%9B%86/Snipaste_2021-06-01_21-25-52.png"></p>
+<h2 id="四、Nunjucks-Error"><a href="#四、Nunjucks-Error" class="headerlink" title="四、Nunjucks Error:"></a>四、Nunjucks Error:</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">为引用问题，大多是我们博文用 &#123;%%&#125;插入图片时的错误，我们只要在&#123;&#125;与%之间加上空格就可以改为&#123; %...% &#125;。</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><ol>
+<li><strong>在下载插件或是clone项目时的报错</strong>多半是网络问题，大家也知道github是国外的网址，在国内有时很不稳定，项目下不下来里，推荐大家直接下载压缩包再解压到自己的博客目录。</li>
+<li><strong>本地预览好后上传到远端修改没有生效</strong>。没有报错，一看自己的博客自己的修改就是没有生成，是不是很奇怪，哈哈，不用急，这个太正常了。在hexo d 后我们的更新可能立刻生成，也可能过一段时间生成，可能是几分钟也可能是几天。这个就有点不方便，没办法服务器要一点点处理你的项目。这就是为什么刚开始博客东西少的时候hexo d 后效果马上就生成，后来东西多了，就会变慢 。</li>
+<li><strong>推到远端后更新博客是空白页</strong>。这是可能是你密钥出了问题，本地与远端关联失败就没有可见了。可以重新设置ssh密钥。</li>
+<li><strong>关于本地预览，推到远端报错。</strong>如果不是一些缺少环境/缺少插件什么的fatal致命错误，一些warning警告可以无视。如果hexo s ,hexo d 出现了fatal错误无法正常运行的问题，也可能是网络不稳定（换个网络比如手机热点），或是github网址本身的问题，你可以等一会再试试可能 就不出错了。</li>
+<li>有关博客打开很慢的问题。<ol>
+<li>博客的东西过多</li>
+<li>网络不稳定</li>
+<li>github常有的问题，有时会很慢 </li>
+</ol>
+</li>
+<li> 当有敏感词如一些编程类字符可能造成 hexo g 时的报错，我们可以放在代码块里。</li>
+</ol>
+<p>解决： 优化自己的博客使用懒加载等</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>关于实现博客本地实时预览，渲染|hexo框架|</title>
+    <url>/2021/06/13/%E5%85%B3%E4%BA%8E%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E5%AE%9E%E6%97%B6%E9%A2%84%E8%A7%88%EF%BC%8C%E6%B8%B2%E6%9F%93hexo%E6%A1%86%E6%9E%B6/</url>
+    <content><![CDATA[<h1 id="关于实现博客本地实时预览，渲染-hexo框架"><a href="#关于实现博客本地实时预览，渲染-hexo框架" class="headerlink" title="关于实现博客本地实时预览，渲染|hexo框架|"></a>关于实现博客本地实时预览，渲染|hexo框架|</h1><p>​        相信有不少人受每次修改配置后在<strong>本地预览</strong>都要更新我们的博客，刷新我们的页面的困扰。我也感觉这个很烦，一下修改一套出错了不好找，修一行预览下又太烦。</p>
+<p>​        这时我们的福音来了就是这些<strong>预览插件</strong>。</p>
+<p>​        在自己博客的目录下</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive</span><br></pre></td></tr></table></figure>
+
+<p>​    </p>
+<p>​    我在之前的<strong>”踩坑“全集</strong>也有提过这些插件，我们在本地预览时就算不出错，使用这些预览插件也是很好的。</p>
+<p>​        我们hexo s 后修改_config.yml等文件，我们的博客会实时更新。</p>
+<p><img src="/2021/06/13/%E5%85%B3%E4%BA%8E%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E5%AE%9E%E6%97%B6%E9%A2%84%E8%A7%88%EF%BC%8C%E6%B8%B2%E6%9F%93hexo%E6%A1%86%E6%9E%B6/Snipaste_2021-06-01_21-25-52.png"></p>
+<p>​        </p>
+<p>是不是很方便。哈哈，懒人福利了。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>搭建个人博客没有那么难！|详细教程|hexo框架|github|</title>
     <url>/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/</url>
     <content><![CDATA[<h1 id="搭建个人博客没有那么难！-详细教程-hexo框架-github"><a href="#搭建个人博客没有那么难！-详细教程-hexo框架-github" class="headerlink" title="搭建个人博客没有那么难！|详细教程|hexo框架|github|"></a>搭建个人博客没有那么难！|详细教程|hexo框架|github|</h1><p>​        </p>
@@ -159,100 +234,6 @@
 <li></li>
 </ol>
 <p>好，大功告成，这样我们的博客就正式上线，还有了主题。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>demo</title>
-    <url>/2021/06/04/demo/</url>
-    <content><![CDATA[<p><video src="http://qu63zmqgg.hb-bkt.clouddn.com/%E8%A2%AB%E6%84%9F%E5%8A%A8%E7%9A%84c.c20191209_144154_Trim.mp4" controls preload="metadata" width="100%" loop></video></p>
-<p><a href="http://qu63zmqgg.hb-bkt.clouddn.com/%E8%A2%AB%E6%84%9F%E5%8A%A8%E7%9A%84c.c20191209_144154_Trim.mp4" download="./video/被感动的c.c20191209_144154_Trim.mp4">downloadvideo</a></p>
-<p><a href="http://qu63zmqgg.hb-bkt.clouddn.com/qu63zmqgg.hb-bkt.clouddn.com/video/%E8%A2%AB%E6%84%9F%E5%8A%A8%E7%9A%84c.c20191209_144154_Trim.mp4">download</a></p>
-<p><a href="../cdn/file/初始化.txt">txt</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2021/06/03/%E6%98%BE%E7%A4%BA%E6%AF%8F%E7%AF%87%E6%96%87%E7%AB%A0%E5%AD%97%E6%95%B0/</url>
-    <content><![CDATA[<h2 id="显示每篇文章字数"><a href="#显示每篇文章字数" class="headerlink" title="显示每篇文章字数"></a>显示每篇文章字数</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>hexo框架&quot;踩坑&quot;大合集</title>
-    <url>/2021/06/03/hexo%E6%A1%86%E6%9E%B6%E2%80%9D%E8%B8%A9%E5%9D%91%E2%80%9C%E5%A4%A7%E5%90%88%E9%9B%86/</url>
-    <content><![CDATA[<h1 id="hexo框架”踩坑“大合集"><a href="#hexo框架”踩坑“大合集" class="headerlink" title="hexo框架”踩坑“大合集"></a>hexo框架”踩坑“大合集</h1><p>​        这里是我在搭建个人博客到遇到的一些问题，因为是自己也是从网上学习研究的，所以遇到了不少奇奇怪怪的问题，在这里总结一下，可能对你有帮助。</p>
-<h2 id="一、-ERROR-Deployer-not-found-git"><a href="#一、-ERROR-Deployer-not-found-git" class="headerlink" title="一、 ERROR Deployer not found: git"></a>一、 ERROR Deployer not found: git</h2><p>​        没有在自己的博客安装git插件的问题。只安装了git工具软件还不够，我们的博客的环境里也一定要有git插件。</p>
-<p>​        我们只要在自己的博客目录下。</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-
-<p>就可以。</p>
-<h2 id="二、-No-such-file-or-directory-和"><a href="#二、-No-such-file-or-directory-和" class="headerlink" title="二、 No such file or directory 和"></a>二、 No such file or directory 和</h2><h2 id="fatal-Could-not-read-from-remote-repository"><a href="#fatal-Could-not-read-from-remote-repository" class="headerlink" title="fatal: Could not read from remote repository"></a>fatal: Could not read from remote repository</h2><h4 id="问题原因："><a href="#问题原因：" class="headerlink" title="问题原因："></a>问题原因：</h4><p>出现这错误一般是以下两种原因：</p>
-<ul>
-<li><p>客户端与服务端未生成 ssh key</p>
-</li>
-<li><p>客户端与服务端的ssh key<strong>不匹配</strong></p>
-</li>
-</ul>
-<p>​        这两个都是我们的ssh密钥出了问题（当你配置多个密钥或误操作很常见），我们在第一次在配置ssh时也出现了这个，也就是说我们没有可以用的密钥，所以我们解决的方法也很明确了，我们把旧的密钥删除掉，重新配置ssh。C:\Users\你的用户\.ssh下的文件删除（如果你有多个密钥注意只把有问题的密钥删除），如果你没有改名字默认是这几个</p>
-<p><img src="/2021/06/03/hexo%E6%A1%86%E6%9E%B6%E2%80%9D%E8%B8%A9%E5%9D%91%E2%80%9C%E5%A4%A7%E5%90%88%E9%9B%86/Snipaste_2021-06-03_09-45-21.png"></p>
-<p>​        我们把前两个删除就可以（只有一个密钥时可以三个都删除，known_hosts在建立 密钥时会自动生成）之后就是</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;your_email@youremail.com</span><br></pre></td></tr></table></figure>
-
-<p>重新建立ssh。 密钥的设置方法详见我的<strong>博文</strong>   <a href="https://crosscloudmoon.github.io/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/">搭建个人博客没有那么难！|详细教程|hexo框架|github|</a>里的关于ssh的内容。</p>
-<h2 id="三、extends-includes-layout-pug-block-content-recent-posts-recent-posts-include-includes-recent-posts-pug-include-includes-pagination-pug"><a href="#三、extends-includes-layout-pug-block-content-recent-posts-recent-posts-include-includes-recent-posts-pug-include-includes-pagination-pug" class="headerlink" title="三、extends includes/layout.pug block content #recent-posts.recent-posts include includes/recent-posts.pug include includes/pagination.pug"></a>三、extends includes/layout.pug block content #recent-posts.recent-posts include includes/recent-posts.pug include includes/pagination.pug</h2><p>​        在本地预览时浏览器里出现了这个，可能是我们的博客在本地渲染时出了问题，解决方法也很简单，我们安装一些在浏览器里预览的插件。</p>
-<p>​        在我们的博客目录下</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive</span><br></pre></td></tr></table></figure>
-
-<p>​    安装后，我们以后修改保存后就可以使用插件实时本地预览，</p>
-<p><img src="/2021/06/03/hexo%E6%A1%86%E6%9E%B6%E2%80%9D%E8%B8%A9%E5%9D%91%E2%80%9C%E5%A4%A7%E5%90%88%E9%9B%86/Snipaste_2021-06-01_21-25-52.png"></p>
-<h2 id="四、Nunjucks-Error"><a href="#四、Nunjucks-Error" class="headerlink" title="四、Nunjucks Error:"></a>四、Nunjucks Error:</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">为引用问题，大多是我们博文用 &#123;%%&#125;插入图片时的错误，我们只要在&#123;&#125;与%之间加上空格就可以改为&#123; %...% &#125;。</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><ol>
-<li><strong>在下载插件或是clone项目时的报错</strong>多半是网络问题，大家也知道github是国外的网址，在国内有时很不稳定，项目下不下来里，推荐大家直接下载压缩包再解压到自己的博客目录。</li>
-<li><strong>本地预览好后上传到远端修改没有生效</strong>。没有报错，一看自己的博客自己的修改就是没有生成，是不是很奇怪，哈哈，不用急，这个太正常了。在hexo d 后我们的更新可能立刻生成，也可能过一段时间生成，可能是几分钟也可能是几天。这个就有点不方便，没办法服务器要一点点处理你的项目。这就是为什么刚开始博客东西少的时候hexo d 后效果马上就生成，后来东西多了，就会变慢 。</li>
-<li><strong>推到远端后更新博客是空白页</strong>。这是可能是你密钥出了问题，本地与远端关联失败就没有可见了。可以重新设置ssh密钥。</li>
-<li><strong>关于本地预览，推到远端报错。</strong>如果不是一些缺少环境/缺少插件什么的fatal致命错误，一些warning警告可以无视。如果hexo s ,hexo d 出现了fatal错误无法正常运行的问题，也可能是网络不稳定（换个网络比如手机热点），或是github网址本身的问题，你可以等一会再试试可能 就不出错了。</li>
-<li>有关博客打开很慢的问题。<ol>
-<li>博客的东西过多</li>
-<li>网络不稳定</li>
-<li>github常有的问题，有时会很慢 </li>
-</ol>
-</li>
-<li> 当有敏感词如一些编程类字符可能造成 hexo g 时的报错，我们可以放在代码块里。</li>
-</ol>
-<p>解决： 优化自己的博客使用懒加载等</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>关于实现博客本地实时预览，渲染|hexo框架|</title>
-    <url>/2021/06/13/%E5%85%B3%E4%BA%8E%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E5%AE%9E%E6%97%B6%E9%A2%84%E8%A7%88%EF%BC%8C%E6%B8%B2%E6%9F%93hexo%E6%A1%86%E6%9E%B6/</url>
-    <content><![CDATA[<h1 id="关于实现博客本地实时预览，渲染-hexo框架"><a href="#关于实现博客本地实时预览，渲染-hexo框架" class="headerlink" title="关于实现博客本地实时预览，渲染|hexo框架|"></a>关于实现博客本地实时预览，渲染|hexo框架|</h1><p>​        相信有不少人受每次修改配置后在<strong>本地预览</strong>都要更新我们的博客，刷新我们的页面的困扰。我也感觉这个很烦，一下修改一套出错了不好找，修一行预览下又太烦。</p>
-<p>​        这时我们的福音来了就是这些<strong>预览插件</strong>。</p>
-<p>​        在自己博客的目录下</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive</span><br></pre></td></tr></table></figure>
-
-<p>​    </p>
-<p>​    我在之前的<strong>”踩坑“全集</strong>也有提过这些插件，我们在本地预览时就算不出错，使用这些预览插件也是很好的。</p>
-<p>​        我们hexo s 后修改_config.yml等文件，我们的博客会实时更新。</p>
-<p><img src="/2021/06/13/%E5%85%B3%E4%BA%8E%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E5%AE%9E%E6%97%B6%E9%A2%84%E8%A7%88%EF%BC%8C%E6%B8%B2%E6%9F%93hexo%E6%A1%86%E6%9E%B6/Snipaste_2021-06-01_21-25-52.png"></p>
-<p>​        </p>
-<p>是不是很方便。哈哈，懒人福利了。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2021/06/03/%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<h2 id="添加搜索功能"><a href="#添加搜索功能" class="headerlink" title="添加搜索功能"></a>添加搜索功能</h2><p>笔者采用的是local search。<br>安装 hexo-generator-searchdb，在站点的根目录下执行以下命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-
-<p>（主题目录下），启用本地搜索功能：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Local search</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
-
-<p>之后部署到远程即可。</p>
 ]]></content>
   </entry>
 </search>

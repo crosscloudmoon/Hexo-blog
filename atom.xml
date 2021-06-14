@@ -57,46 +57,6 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://crosscloudmoon.github.io/2021/06/03/%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/"/>
-    <id>http://crosscloudmoon.github.io/2021/06/03/%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</id>
-    <published>2021-06-03T12:10:10.403Z</published>
-    <updated>2021-06-03T12:10:10.587Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="添加搜索功能"><a href="#添加搜索功能" class="headerlink" title="添加搜索功能"></a>添加搜索功能</h2><p>笔者采用的是local search。<br>安装 hexo-generator-searchdb，在站点的根目录下执行以下命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure><p>（主题目录下），启用本地搜索功能：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Local search</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure><p>之后部署到远程即可。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;添加搜索功能&quot;&gt;&lt;a href=&quot;#添加搜索功能&quot; class=&quot;headerlink&quot; title=&quot;添加搜索功能&quot;&gt;&lt;/a&gt;添加搜索功能&lt;/h2&gt;&lt;p&gt;笔者采用的是local search。&lt;br&gt;安装 hexo-generator-searchdb，在站点的</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://crosscloudmoon.github.io/2021/06/03/%E6%98%BE%E7%A4%BA%E6%AF%8F%E7%AF%87%E6%96%87%E7%AB%A0%E5%AD%97%E6%95%B0/"/>
-    <id>http://crosscloudmoon.github.io/2021/06/03/%E6%98%BE%E7%A4%BA%E6%AF%8F%E7%AF%87%E6%96%87%E7%AB%A0%E5%AD%97%E6%95%B0/</id>
-    <published>2021-06-03T11:56:54.177Z</published>
-    <updated>2021-06-03T11:56:54.373Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="显示每篇文章字数"><a href="#显示每篇文章字数" class="headerlink" title="显示每篇文章字数"></a>显示每篇文章字数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;显示每篇文章字数&quot;&gt;&lt;a href=&quot;#显示每篇文章字数&quot; class=&quot;headerlink&quot; title=&quot;显示每篇文章字数&quot;&gt;&lt;/a&gt;显示每篇文章字数&lt;/h2&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;t</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>hexo框架&quot;踩坑&quot;大合集</title>
     <link href="http://crosscloudmoon.github.io/2021/06/03/hexo%E6%A1%86%E6%9E%B6%E2%80%9D%E8%B8%A9%E5%9D%91%E2%80%9C%E5%A4%A7%E5%90%88%E9%9B%86/"/>
     <id>http://crosscloudmoon.github.io/2021/06/03/hexo%E6%A1%86%E6%9E%B6%E2%80%9D%E8%B8%A9%E5%9D%91%E2%80%9C%E5%A4%A7%E5%90%88%E9%9B%86/</id>

@@ -1,0 +1,58 @@
+.read-mode{
+    /* 字体大小 */
+    font-size: 36px;
+    /* 可以在这里引入自定义字体，具体方法请自行百度css引入字体 */
+}
+
+.read-mode #web_bg{
+    /* 背景颜色 */
+    /* background:#fdf6e3; */
+    background: lightblue;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: rgba(29, 94, 138, 0.2);
+    border-radius: 2em;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #4893c5;
+    background-image: -webkit-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.4) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0.4) 75%,
+      transparent 75%,
+      transparent
+    );
+    border-radius: 2em;
+  }
+  
+  ::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+  
+  ::-moz-selection {
+    color: #fff;
+    background-color: #49b1f5;
+  }
+
+
+/* 光标 */
+body {
+    cursor: url(http://qu63zmqgg.hb-bkt.clouddn.com/%E6%8C%87%E9%92%88.cur),
+        default;
+}
+a,
+img {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
+        default;
+}

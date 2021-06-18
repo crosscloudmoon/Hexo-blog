@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://crosscloudmoon.github.io/2021/06/04/demo/</loc>
+    
+    <lastmod>2021-06-17</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://crosscloudmoon.github.io/2021/06/02/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E9%9A%BE%EF%BC%81%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8Bhexo%E6%A1%86%E6%9E%B6github/</loc>
     
     <lastmod>2021-06-16</lastmod>
@@ -24,13 +31,6 @@
   
   <url>
     <loc>http://crosscloudmoon.github.io/2021/06/03/hexo%E6%A1%86%E6%9E%B6%E2%80%9D%E8%B8%A9%E5%9D%91%E2%80%9C%E5%A4%A7%E5%90%88%E9%9B%86/</loc>
-    
-    <lastmod>2021-06-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://crosscloudmoon.github.io/2021/06/04/demo/</loc>
     
     <lastmod>2021-06-16</lastmod>
     
@@ -67,7 +67,7 @@
 
   <url>
     <loc>http://crosscloudmoon.github.io/</loc>
-    <lastmod>2021-06-16</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -75,14 +75,14 @@
   
   <url>
     <loc>http://crosscloudmoon.github.io/tags/hexo/</loc>
-    <lastmod>2021-06-16</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://crosscloudmoon.github.io/tags/Typora/</loc>
-    <lastmod>2021-06-16</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

@@ -10,6 +10,42 @@
 <p>李厚霖ddfsdf</p>
 <p><br><br><br><br></p>
 <p>asdfd</p>
+<div class="demo"></div>
+<script>
+    function tt(){
+        $('.demo').slider({
+    imgList: [
+        {
+            img: 'https://cdn.jsdelivr.net/gh/blogimg/picbed@latest/2020/04/13/2a877ea5da1292c817cbc2a254c01c31.png',
+            a: '跳转url地址',
+        },
+        {
+            img: 'https://cdn.jsdelivr.net/gh/blogimg/picbed@latest/2020/04/13/5005109d1aa2ffd28984c2b02b8cbfbe.png',
+            a: '跳转url地址',
+        },
+        {
+            img: 'https://cdn.jsdelivr.net/gh/blogimg/picbed@latest/2020/04/13/163a2ade4361d1ed705ed523091af67e.png',
+            a: '跳转url地址',
+        }
+    ], //图片的列表，a属性里面存放的是网络地址，img存放的是图片地址
+    width: "100%", //图片的宽
+    height: 500, //图片的高
+    isAuto: false, //是否自动轮播
+    moveTime: 3000, //运动时间
+    direction: 'right', //轮播的方向
+    btnWidth: 30, //按钮的宽
+    btnHeight: 30, //按钮的高
+    spanWidth: 10, //span按钮的宽
+    spanHeight: 10, //span按钮的高
+    spanColor: '#fff', //span按钮的颜色
+    activeSpanColor: 'red', //选中的span颜色
+    btnBackgroundColor: 'rgba(0, 0, 0, 0.3)', //两侧按钮的颜色
+    spanRadius: '50%', //span按钮的圆角程度
+    spanMargin: 3, //span之间的距离
+})
+    }
+    window.addEventListener('DOMContentLoaded',tt)
+</script>
 ]]></content>
   </entry>
   <entry>
@@ -112,6 +148,123 @@
 ]]></content>
       <tags>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何为Typora换肤！|教程|</title>
+    <url>/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<br>
+
+<br>
+
+<br>
+
+<h1 id="如何为Typora换肤！-教程"><a href="#如何为Typora换肤！-教程" class="headerlink" title="如何为Typora换肤！|教程|"></a>如何为Typora换肤！|教程|</h1><br>
+
+<p>​    Typora是一款<strong>Markdown编辑</strong>软件，它在记笔记方面十分出众，尤其在计算机行业，深受广大编程工作人员的喜爱。但是原生的<strong>Typora皮肤</strong>在一些编程语言的代码上的显示上有一些问题，代码块与背景的颜色过于相似让人不好分别，所以就有不少换上自己喜欢的主题，官网也有提供换肤文档，但因为是外文，有些地方可能不直观，我在这里提供教程。</p>
+<br>
+
+<br>
+
+<br>
+
+<p>我们打开文件里的<strong>偏好设置</strong>。</p>
+<br>
+
+<p><img src="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/Snipaste_2021-06-15_20-20-27.png"></p>
+<br>
+
+<br>
+
+<br>
+
+<p>在这里可以获取主题，  <a href="https://theme.typora.io/">https://theme.typora.io/</a></p>
+<br>
+
+<p><img src="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/Snipaste_2021-06-15_20-19-01.png"></p>
+<br>
+
+<br>
+
+<br>
+
+<p>找一个自己喜欢的下载（想要更多精美主题可以自己到github上找有很多）。</p>
+<p>就这个了。</p>
+<br>
+
+<p><img src="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/Snipaste_2021-06-15_20-37-14.png"></p>
+<br>
+
+<br>
+
+<br>
+
+<p>解压后，拷贝主题文件。</p>
+<br>
+
+<p><img src="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/Snipaste_2021-06-15_20-40-51.png"></p>
+<p>注意：有的主题有<u>白天与黑夜两种</u>模式，两种都要就两个的对应文件都拷贝。</p>
+<br>
+
+<br>
+
+<br>
+
+<p>例如这个主题。</p>
+<br>
+
+<p><img src="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/Snipaste_2021-06-15_20-43-31.png"></p>
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<p>打开主题文件夹</p>
+<br>
+
+<p><img src="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/Snipaste_2021-06-15_20-20-42.png"></p>
+<br>
+
+<br>
+
+<p>把刚刚我们的文件粘进去。</p>
+<br>
+
+<p><img src="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/Snipaste_2021-06-15_20-46-42.png"></p>
+<br>
+
+<p>回到设置，设置自己新加的主题。</p>
+<br>
+
+<p><img src="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/Snipaste_2021-06-15_20-45-39.png"></p>
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<p> 要有深色主题就一起设置，我这里就只设置浅色。</p>
+<p><img src="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/Snipaste_2021-06-15_20-46-03.png"></p>
+<br>
+
+<br>
+
+<br>
+
+<p>这样我们就可以用自己喜欢的主题了。</p>
+<br>
+
+<p><img src="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/Snipaste_2021-06-15_20-49-45.png"></p>
+<p>是不是更美观了。</p>
+<br>
+]]></content>
+      <tags>
+        <tag>Typora</tag>
       </tags>
   </entry>
   <entry>
@@ -416,123 +569,6 @@
 ]]></content>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何为Typora换肤！|教程|</title>
-    <url>/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<br>
-
-<br>
-
-<br>
-
-<h1 id="如何为Typora换肤！-教程"><a href="#如何为Typora换肤！-教程" class="headerlink" title="如何为Typora换肤！|教程|"></a>如何为Typora换肤！|教程|</h1><br>
-
-<p>​    Typora是一款<strong>Markdown编辑</strong>软件，它在记笔记方面十分出众，尤其在计算机行业，深受广大编程工作人员的喜爱。但是原生的<strong>Typora皮肤</strong>在一些编程语言的代码上的显示上有一些问题，代码块与背景的颜色过于相似让人不好分别，所以就有不少换上自己喜欢的主题，官网也有提供换肤文档，但因为是外文，有些地方可能不直观，我在这里提供教程。</p>
-<br>
-
-<br>
-
-<br>
-
-<p>我们打开文件里的<strong>偏好设置</strong>。</p>
-<br>
-
-<p><img src="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/Snipaste_2021-06-15_20-20-27.png"></p>
-<br>
-
-<br>
-
-<br>
-
-<p>在这里可以获取主题，  <a href="https://theme.typora.io/">https://theme.typora.io/</a></p>
-<br>
-
-<p><img src="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/Snipaste_2021-06-15_20-19-01.png"></p>
-<br>
-
-<br>
-
-<br>
-
-<p>找一个自己喜欢的下载（想要更多精美主题可以自己到github上找有很多）。</p>
-<p>就这个了。</p>
-<br>
-
-<p><img src="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/Snipaste_2021-06-15_20-37-14.png"></p>
-<br>
-
-<br>
-
-<br>
-
-<p>解压后，拷贝主题文件。</p>
-<br>
-
-<p><img src="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/Snipaste_2021-06-15_20-40-51.png"></p>
-<p>注意：有的主题有<u>白天与黑夜两种</u>模式，两种都要就两个的对应文件都拷贝。</p>
-<br>
-
-<br>
-
-<br>
-
-<p>例如这个主题。</p>
-<br>
-
-<p><img src="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/Snipaste_2021-06-15_20-43-31.png"></p>
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-<p>打开主题文件夹</p>
-<br>
-
-<p><img src="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/Snipaste_2021-06-15_20-20-42.png"></p>
-<br>
-
-<br>
-
-<p>把刚刚我们的文件粘进去。</p>
-<br>
-
-<p><img src="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/Snipaste_2021-06-15_20-46-42.png"></p>
-<br>
-
-<p>回到设置，设置自己新加的主题。</p>
-<br>
-
-<p><img src="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/Snipaste_2021-06-15_20-45-39.png"></p>
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-<p> 要有深色主题就一起设置，我这里就只设置浅色。</p>
-<p><img src="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/Snipaste_2021-06-15_20-46-03.png"></p>
-<br>
-
-<br>
-
-<br>
-
-<p>这样我们就可以用自己喜欢的主题了。</p>
-<br>
-
-<p><img src="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/Snipaste_2021-06-15_20-49-45.png"></p>
-<p>是不是更美观了。</p>
-<br>
-]]></content>
-      <tags>
-        <tag>Typora</tag>
       </tags>
   </entry>
 </search>

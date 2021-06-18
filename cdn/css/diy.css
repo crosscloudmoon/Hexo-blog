@@ -47,12 +47,12 @@
 
 
 /* 光标 */
-body, body:active {
-    cursor: url(http://qu63zmqgg.hb-bkt.clouddn.com/qu63zmqgg.hb-bkt.clouddn.com/cursor/Normal.cur),
+body {
+    cursor: url(http://qu63zmqgg.hb-bkt.clouddn.com/%E6%8C%87%E9%92%88.cur),
         default;
 }
 a,
 img {
-    cursor: url(http://qu63zmqgg.hb-bkt.clouddn.com/qu63zmqgg.hb-bkt.clouddn.com/cursor/Link.cur),
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
         default;
 }

@@ -1,6 +1,240 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>学会使用Less，工作效率UP|笔记|教程|</title>
+    <url>/2021/06/22/Less/</url>
+    <content><![CDATA[<h1 id="学会使用Less，工作效率UP-笔记-教程"><a href="#学会使用Less，工作效率UP-笔记-教程" class="headerlink" title="学会使用Less，工作效率UP|笔记|教程|"></a>学会使用Less，工作效率UP|笔记|教程|</h1><br>
+
+<p>​    Less是一门<code>CSS预处理语言</code>,它<em>基于Node</em>,它扩展了CSS语言，增加了功能，使写CSS更加方便，结构更加清晰。</p>
+<p>​    <strong>功能</strong>： 变量，嵌套，伪类，伪元素，媒体查询。</p>
+<br>
+
+<br>
+
+<br>
+
+<h2 id="Less里的注释"><a href="#Less里的注释" class="headerlink" title="Less里的注释"></a>Less里的注释</h2><p>以**//开头**的注释，不会被编译到CSS里</p>
+<p>以**/* */包裹**的注释会被编译到CSS里</p>
+<p><br><br><br><br><br></p>
+<h2 id="使用Less的方式"><a href="#使用Less的方式" class="headerlink" title="使用Less的方式"></a>使用Less的方式</h2><ol>
+<li><p><code>使用npm安装</code>/命令行用法</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g less</span><br></pre></td></tr></table></figure></li>
+<li><p><code>引入式</code>/浏览器端用法（引入文件不符合预编辑的理念，不推荐）</p>
+ <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;less.js&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p><code>编辑器插件</code>（<strong>推荐</strong>）</p>
+<p> VScode里的 Easy LESS插件（保存Less时自动生成CSS文件）</p>
+<p> <strong>注意</strong>：要在HTML里引入 自动生成的CSS文件。</p>
+</li>
+<li><p>在项目中使用打包工具（webpack,gulp）</p>
+</li>
+</ol>
+<p><br><br><br><br><br></p>
+<h2 id="Less功能"><a href="#Less功能" class="headerlink" title="Less功能"></a>Less功能</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// 布局</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">header</span>&gt;</span><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">section</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">footer</span>&gt;</span><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><br><br>### 1.变量</p>
+<br>
+
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background</span>: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 把常用的颜色，大小等设为变量，统一修改，我们就可以快速改变页面的主题，风格。</span></span><br><span class="line"><span class="variable">@width:</span> <span class="number">200px</span>;			</span><br><span class="line"><span class="variable">@color:</span> lightblue;</span><br><span class="line"><span class="variable">@m:</span> margin;</span><br><span class="line"><span class="variable">@selector:</span> footer;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="variable">@width</span>; </span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="variable">@color</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">@&#123;selector&#125;</span>&#123;			<span class="comment">// 把选择器与属性设为变量时要用&#123;&#125;包裹</span></span><br><span class="line">    @&#123;m&#125;: <span class="selector-tag">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p>作为URL: @{url}</p>
+<p><strong>注意</strong>： Less里的变量均为块级作用域</p>
+<p><br><br><br><br> </p>
+<h4 id="Less变量的延迟加载问题"><a href="#Less变量的延迟加载问题" class="headerlink" title="Less变量的延迟加载问题"></a>Less变量的延迟加载问题</h4><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@var:</span> <span class="number">0</span>;</span><br><span class="line"><span class="selector-class">.class</span> &#123;</span><br><span class="line">    <span class="variable">@var:</span> <span class="number">1</span>;</span><br><span class="line">    <span class="selector-class">.brass</span> &#123;</span><br><span class="line">        <span class="variable">@var:</span> <span class="number">2</span>;</span><br><span class="line">        three: @var;		<span class="comment">//3</span></span><br><span class="line">        <span class="variable">@var:</span> <span class="number">3</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    one: @var;				<span class="comment">// 1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>Less会把一个块的内容全部加载后，赋值。</code></p>
+<p><br><br><br><br><br><br></p>
+<h3 id="2-嵌套"><a href="#2-嵌套" class="headerlink" title="2.嵌套"></a>2.嵌套</h3><br>
+
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span> <span class="selector-tag">header</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">    <span class="selector-tag">header</span>&#123;</span><br><span class="line">        <span class="attribute">color</span>:  pink;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><br><br><br><br><br></p>
+<h3 id="3-伪类"><a href="#3-伪类" class="headerlink" title="3.伪类"></a>3.伪类</h3><br>
+
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">section</span>&#123;    <span class="attribute">height</span>: <span class="number">200px</span>;    <span class="attribute">width</span>: <span class="number">200px</span>;    <span class="attribute">background</span>: lightblue;    <span class="selector-tag">&amp;</span><span class="selector-pseudo">:hover</span>&#123;				<span class="comment">// 伪元素     &amp;为父选择器（指section）        background: lightyellow;    &#125;    &amp;::before&#123;					// 伪类        content: &#x27;&#x27;;            &#125;    &amp;:nth-child(2)&#123;					// 平级        width: 50px;        height: 50px;    &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><br><br><br><br><br></p>
+<h3 id="4-媒体查询"><a href="#4-媒体查询" class="headerlink" title="4.媒体查询"></a>4.媒体查询</h3><br>
+
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;    <span class="selector-tag">header</span>&#123;        <span class="attribute">color</span>: ;    &#125;    <span class="selector-tag">section</span>&#123;    <span class="attribute">height</span>: <span class="number">200px</span>;    <span class="attribute">width</span>: <span class="number">200px</span>;    <span class="attribute">background</span>: lightblue;        <span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">500px</span>)&#123;            <span class="attribute">background</span>: grey;        &#125;&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><br><br><br><br></p>
+<h3 id="5-混合（mix-in-）"><a href="#5-混合（mix-in-）" class="headerlink" title="5.混合（mix in ）"></a>5.混合（mix in ）</h3><p>当界面的结构不再单一，我们就可能会用到<code>混合模式</code>（冗余代码抽离出来）</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 不带（）就是普通的混合会被编译到CSS里.pinkthem()&#123;				// 抽离出代码，减少冗余    width: 200px;    height: 200px;    color: pink;    &#125;.container&#123;    header&#123;        .pinktheme()；			//括号一定要有，防止被css编译到代码内。    &#125;    footer&#123;        .pinktheme()；    &#125;    &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong>用法上和函数相似，但本质 不是函数。</p>
+<p><br><br><br><br></p>
+<h4 id="5-1带参数的混合"><a href="#5-1带参数的混合" class="headerlink" title="5.1带参数的混合"></a>5.1带参数的混合</h4><p>虽然代码冗余减少了，但有时可能不想全部应用，这种混合就少了一点灵活性，这时候就要用参数来控制 。</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.pinktheme</span>(<span class="variable">@w</span>,<span class="variable">@h</span>,<span class="variable">@c</span>)&#123;    <span class="attribute">width</span>: <span class="variable">@w</span>;    <span class="attribute">height</span>: <span class="variable">@h</span>;    <span class="attribute">color</span>: <span class="variable">@c</span>&#125;<span class="selector-class">.container</span>&#123;    <span class="selector-tag">header</span>&#123;        <span class="selector-class">.pinktheme</span>(<span class="number">200px</span>,<span class="number">300px</span>, pink)；				<span class="comment">// 传参    &#125;    footer&#123;        .pinktheme(100px, 200px, lightpink)；    &#125;    &#125;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p>传的参数个数要求一一对应的，不可少参，但是我们可以使用默认值来避免传参，只在特别修改的地方修改参数。</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.pinktheme</span>(<span class="variable">@w</span>:<span class="number">200px</span>,<span class="variable">@h</span>:<span class="number">200px</span>,<span class="variable">@c</span>:pink)&#123;    <span class="attribute">width</span>: <span class="variable">@w</span>;    <span class="attribute">height</span>: <span class="variable">@h</span>;    <span class="attribute">color</span>: <span class="variable">@c</span>&#125;<span class="selector-class">.container</span>&#123;    <span class="selector-tag">footer</span>&#123;        <span class="selector-class">.pinktheme</span>(<span class="number">100px</span>)；		<span class="comment">// 只修改宽度，别的默认    &#125;    header&#123;        .pinktheme(@c:pink)；				// 命名参数    &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><br><br><br><br><br></p>
+<h4 id="5-2匹配模式"><a href="#5-2匹配模式" class="headerlink" title="5.2匹配模式"></a>5.2匹配模式</h4><p>之前我们学过把代码抽离出去，到了后期抽离的代码块越来越多，就会影响我们less编写，所以我们没抽离出的代码一起放在<strong>别的less</strong>文件。</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 新建的名叫themes的less文件.pinktheme(P1,@w:200px,@h:200px,@c:pink)&#123;		// P1就是模式    width: @w;    height: @h;    color: @c&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<br>
+
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 原文件@import &quot;themes&quot;;			// import引入文件，注意有分号        .container&#123;    footer&#123;        .pinktheme(P1,100px)；				// 如果我们pinktheme有多个版本就可以选择模式    &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>这种写法适用于多个代码块有大部分冗余，我们每次只修改一两个属性，如我们在界面上画图形每个代码块只有三个形的方向的代码不同，我们建立不同模式，再把每个模式内相同的代码再一次抽离出去，实现减少冗余 。</p>
+<p>例如：我们有两个pinktheme模式但我们只是颜色上有一点 不同。</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// themes文件.wh(@w:200px,@h:200px)&#123;			// 再抽离    width: @w;    height: @h;&#125;.pinktheme(P1,@c:pink)&#123;		// P1模式	.wh();    color: @c;&#125;.pinktheme(P2,@c:lightpink&#123;		// P2模式 只有color不一样	.wh();    color: @c;&#125;// 原文件@import &quot;themes&quot;;        .container&#123;    footer&#123;        .pinktheme(P1)；	     header&#123;        .pinktheme(P2)；				    &#125;    &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果我们不用匹配模式，用不同的代码块抽离，就会多出不少相似的代码块（.pinktheme,.lightpinktheme）。</p>
+<p>在调用上还可以写成这种</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// themes文件.pinktheme(@w:200px,@h:200px)&#123;			// 使用同名    width: @w;    height: @h;&#125;.pinktheme(P1,@c:pink)&#123;		// P1模式    color: @c&#125;.pinktheme(P2,@c:lightpink&#123;		// P2模式 只有color不一样    color: @c&#125;// 原文件@import &quot;themes&quot;;        .container&#123;    footer&#123;        .pinktheme();			// 这种上面代码是减少，但要调用两个，写法随自己喜好了这个。          .pinktheme(P1)；	     header&#123;         .pinktheme();        .pinktheme(P2)；				    &#125;    &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>最终进阶</code>:调用两次是不是还有有个麻烦，还可以优化</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// themes文件.pinktheme(@_)&#123;			// 使用@_,每次调用时自动执行    width: 200px;    height: 200px;&#125;.pinktheme(P1,@c:pink)&#123;	    color: @c&#125;.pinktheme(P2,@c:lightpink&#123;	    color: @c&#125;// 原文件@import &quot;themes&quot;;        .container&#123;    footer&#123;		         .pinktheme(P1)；			//  只调用一次     header&#123;        .pinktheme(P2)；				    &#125;    &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><br><br><br><br><br><br></p>
+<h4 id="5-3arguments变量（非重点）"><a href="#5-3arguments变量（非重点）" class="headerlink" title="5.3arguments变量（非重点）"></a>5.3arguments变量（非重点）</h4><p>它是实参变量，伪数组。</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.border</span>(<span class="variable">@px</span>, <span class="variable">@style</span>,<span class="variable">@color</span>)&#123;    <span class="attribute">border</span>: <span class="variable">@arguments</span>;    &#125;<span class="selector-class">.container</span>&#123;    <span class="selector-class">.border</span>(<span class="number">1px</span> , solid, black);&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;    <span class="attribute">border</span>: <span class="number">1px</span>, solid, black;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<br>
+
+<p><br><br><br><br><br></p>
+<h3 id="6-Less计算"><a href="#6-Less计算" class="headerlink" title="6.Less计算"></a>6.Less计算</h3><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;    <span class="attribute">width</span>: (<span class="number">100</span>+<span class="number">100px</span>);				<span class="comment">// 只有一个单位就可以&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong>CSS里也有计算（通过cacl()计算，），但CSS内的直接计算会影响性能，建议使用less计算。</p>
+<p><br><br><br><br><br></p>
+<h3 id="7-继承-性能比混合高，灵活性没有混合强"><a href="#7-继承-性能比混合高，灵活性没有混合强" class="headerlink" title="7.继承(性能比混合高，灵活性没有混合强)"></a>7.继承(性能比混合高，灵活性没有混合强)</h3><p>使用混合可以大大减少我们less代码冗余，但是我们原生css内的代码量会变得冗长，这是我们不想见到的，这时混合就完成不了了，就有必要<code>了解继承</code>的用法。</p>
+<p><code>继承不可以传参</code>。</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// themes文件.pinktheme&#123;			// 没有括号它就不再是混合，而是一个类名    color: pink;		// 放公用的代码&#125;// 原文件@import &quot;themes&quot;;        .container&#123;        header:extend(.pinktheme)&#123;		// extend()是一个函数括号内加类名            width: 200px;			// 可能要改的代码    	height: 200px;        &#125;&#125;// 因为extend为同级也可以写成.container&#123;        header&#123;	            &amp;:extend(.pinktheme);            width: 200px;    	height: 200px;        &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.pinktheme</span>,						<span class="selector-class">.container</span> <span class="selector-tag">header</span> &#123;  <span class="attribute">color</span>: pink;&#125;<span class="selector-class">.container</span> <span class="selector-tag">header</span> &#123;  <span class="attribute">width</span>: <span class="number">200px</span>;  <span class="attribute">height</span>: <span class="number">200px</span>;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>当需要继承全部状态时</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// themes.pinktheme&#123;    color: pink;    &amp;:hover&#123;			// 有状态        background: grey;    &#125;&#125;// 原文件.container&#123;        header&#123;	            &amp;:extend(.pinktheme all);			// 全部继承            width: 200px;    	height: 200px;        &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><br><br><br><br><br></p>
+<h3 id="8-避免编译"><a href="#8-避免编译" class="headerlink" title="8.避免编译"></a>8.避免编译</h3><p>使用**~””**,引号内包裹的less代码会被避免编译，如是计算，由浏览器计算。</p>
+]]></content>
+      <categories>
+        <category>web前端</category>
+        <category>Node</category>
+      </categories>
+      <tags>
+        <tag>Less</tag>
+        <tag>Node</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最强的文本编辑器Vim，其实也没有怎么难！|入门教程|</title>
+    <url>/2021/06/22/Vim/</url>
+    <content><![CDATA[<h1 id="最强的文本编辑器Vim，其实也没有怎么难！-入门教程"><a href="#最强的文本编辑器Vim，其实也没有怎么难！-入门教程" class="headerlink" title="最强的文本编辑器Vim，其实也没有怎么难！|入门教程|"></a>最强的文本编辑器Vim，其实也没有怎么难！|入门教程|</h1><p>​    Vim作为一款<code>上古神器</code>，从人人鄙视到爱不释手，它有几十年的历史， 它是最强的<strong>文本编辑器</strong>,没有之一，说Vim不好用的人都是不会用Vim的人。</p>
+<p>​    一开始可能有点难，只有自己还没有习惯它，熟练后可以让你的效率翻倍。</p>
+<p>​    在这里我只提供一些最常用的命令，没有必要一下就把环境做的太繁杂，它有好多插件，这是你用上手了，感觉Vim的常用命令不能满足你的速度了，后后慢慢来学习进阶的命令也好，设置Vim环境也好，这都是后面的事。</p>
+<p>​    这样想的话是不是vim也没什么难的了。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim learn-vim.txt			</span><br></pre></td></tr></table></figure>
+
+<p><code>用vim进入文件，有的话直接进入，没有vim会自动建立。</code></p>
+<br>
+
+<h2 id="Vim模式"><a href="#Vim模式" class="headerlink" title="Vim模式"></a>Vim模式</h2><ol>
+<li>命令模式</li>
+<li>插入模式——输入文本</li>
+</ol>
+<p><strong>注意：</strong> Vim不只两种模式，但现在我们就当作有两种，以免混淆。</p>
+<p>输入i切换为插入模式（默认状态下）</p>
+<p>Esc键——从其它模式回到默认模式（这里当作是命令模式）</p>
+<p><br><br><br></p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="光标移动"><a href="#光标移动" class="headerlink" title="光标移动"></a>光标移动</h3><p>h    左</p>
+<p>j     下</p>
+<p>k    上</p>
+<p>l    右</p>
+<p>0     光标跳到当前行的行首</p>
+<p>$    光标跳到当前行的行尾</p>
+<p>14G     跳到14行</p>
+<p>:14     跳到14行</p>
+<p>gg    到文件开头</p>
+<p>G    光标跳到文件最后一行</p>
+<p>w    跳到下个单词开头（word）</p>
+<p>b    跳到上个单词开头（backsapce）</p>
+<p><br><br><br><br><br></p>
+<h3 id="修改内容"><a href="#修改内容" class="headerlink" title="修改内容"></a>修改内容</h3><p>i    在光标所在位置前开始插入。(insert )</p>
+<p>I    在光标行首插入</p>
+<p>a    在光标所在位置后开始 插入。（append）</p>
+<p>A:    在光标行末插入</p>
+<p>o    在光标下面插入空行 (open a line)</p>
+<p>O    在光标上面插入空行</p>
+<p>x    删除光标所在位置一个字符</p>
+<p><br><br><br><br><br> </p>
+<h4 id="delete类"><a href="#delete类" class="headerlink" title="delete类"></a>delete类</h4><p>D    删除当前光标后面的内容</p>
+<p>dd    删除当前行</p>
+<p>dw    删除一个词(delet word)</p>
+<p><br><br><br><br></p>
+<h4 id="change类"><a href="#change类" class="headerlink" title="change类"></a>change类</h4><p>ci”        修改“”里的内容</p>
+<p>ct)    删除（）里字符进行修改（change to 括号）</p>
+<p>ciw     删除当前光标单词后进入插入模式（change inner word修改单词）</p>
+<br>
+
+<br>
+
+<br>
+
+<h3 id="日常操作"><a href="#日常操作" class="headerlink" title="日常操作"></a>日常操作</h3><p>y     复制当前行</p>
+<p>p    粘贴(paste)</p>
+<p>u    撤销，可多次</p>
+<p>.     执行上一次命令</p>
+<p>:g/a/s//b/g     把文件里全部的a换成b</p>
+<p>ctrl+insert =&gt; ctrl+c</p>
+<p>shift+insert =&gt; ctrl+v</p>
+<p>以上两个命令在windows里通用</p>
+<p>ctrl+u     向上翻半页（forward）</p>
+<p>ctrl +d    向下番半页(upward)</p>
+<p><br><br><br><br><br><br></p>
+<h4 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h4><p>/abc    在当前文件内查找“abc”</p>
+<p>n    查找下一个</p>
+<p>N    查找上一个</p>
+<p>fs    在当前行查找s字符，；分号下一个</p>
+<p><br><br><br><br></p>
+<h4 id="保存"><a href="#保存" class="headerlink" title="保存"></a>保存</h4><p>:w   存盘</p>
+<p>:wq     存盘退出 </p>
+<p>:x     存盘退出 </p>
+<p>:q    不存盘退出 </p>
+<p><br><br><br></p>
+<p><strong>注意</strong>：vim是文本编辑器，你可以用它写<strong>C/C++<strong>什么，但不推荐你用它编辑一些<u>前端类的，图片视频 什么过多</u>的项目，我就是一名前端工程师，我平时写程序 时用的还有</strong>VScode</strong>,我用vim快速编辑一些文本文件什么，你也可以在VSC里安装vim的插件让你编辑前端项目到效率更高。</p>
+]]></content>
+      <tags>
+        <tag>Node</tag>
+        <tag>Vim</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>demo</title>
     <url>/2021/06/04/demo/</url>
     <content><![CDATA[<p><video src="http://qu63zmqgg.hb-bkt.clouddn.com/%E8%A2%AB%E6%84%9F%E5%8A%A8%E7%9A%84c.c20191209_144154_Trim.mp4" controls preload="metadata" width="100%" loop></video></p>

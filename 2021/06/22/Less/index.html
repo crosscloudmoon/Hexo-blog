@@ -1,0 +1,304 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>学会使用Less，工作效率UP|笔记|教程| | I'm coding</title><meta name="keywords" content="Less,Node"><meta name="author" content="穿雲月"><meta name="copyright" content="穿雲月"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="学会使用Less，工作效率UP|笔记|教程|  ​    Less是一门CSS预处理语言,它基于Node,它扩展了CSS语言，增加了功能，使写CSS更加方便，结构更加清晰。 ​    功能： 变量，嵌套，伪类，伪元素，媒体查询。       Less里的注释以**&#x2F;&#x2F;开头**的注释，不会被编译到CSS里 以**&#x2F;* *&#x2F;包裹**的注释会被编译到CSS里  使用Less的方式 使用npm安装&#x2F;命令行">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学会使用Less，工作效率UP|笔记|教程|">
+<meta property="og:url" content="http://crosscloudmoon.github.io/2021/06/22/Less/index.html">
+<meta property="og:site_name" content="I&#39;m coding">
+<meta property="og:description" content="学会使用Less，工作效率UP|笔记|教程|  ​    Less是一门CSS预处理语言,它基于Node,它扩展了CSS语言，增加了功能，使写CSS更加方便，结构更加清晰。 ​    功能： 变量，嵌套，伪类，伪元素，媒体查询。       Less里的注释以**&#x2F;&#x2F;开头**的注释，不会被编译到CSS里 以**&#x2F;* *&#x2F;包裹**的注释会被编译到CSS里  使用Less的方式 使用npm安装&#x2F;命令行">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://t1.picb.cc/uploads/2021/06/13/w6vw2c.png">
+<meta property="article:published_time" content="2021-06-22T02:05:56.000Z">
+<meta property="article:modified_time" content="2021-06-22T03:08:34.689Z">
+<meta property="article:author" content="穿雲月">
+<meta property="article:tag" content="Less">
+<meta property="article:tag" content="Node">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://t1.picb.cc/uploads/2021/06/13/w6vw2c.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://crosscloudmoon.github.io/2021/06/22/Less/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="/crossCloudMoon" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '学会使用Less，工作效率UP|笔记|教程|',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-06-22 11:08:34'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    })(window)</script><link rel="stylesheet" href="http://qu63zmqgg.hb-bkt.clouddn.com/qu63zmqgg.hb-bkt.clouddn.com/css/diy.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/macblack.css"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="I'm coding" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://t1.picb.cc/uploads/2021/05/25/wJ8LL7.th.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://t1.picb.cc/uploads/2021/06/13/w6vw2c.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">I'm coding</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">学会使用Less，工作效率UP|笔记|教程|</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-06-22T02:05:56.000Z" title="发表于 2021-06-22 10:05:56">2021-06-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-06-22T03:08:34.689Z" title="更新于 2021-06-22 11:08:34">2021-06-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/web%E5%89%8D%E7%AB%AF/Node/">Node</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="学会使用Less，工作效率UP|笔记|教程|"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="学会使用Less，工作效率UP-笔记-教程"><a href="#学会使用Less，工作效率UP-笔记-教程" class="headerlink" title="学会使用Less，工作效率UP|笔记|教程|"></a>学会使用Less，工作效率UP|笔记|教程|</h1><br>
+
+<p>​    Less是一门<code>CSS预处理语言</code>,它<em>基于Node</em>,它扩展了CSS语言，增加了功能，使写CSS更加方便，结构更加清晰。</p>
+<p>​    <strong>功能</strong>： 变量，嵌套，伪类，伪元素，媒体查询。</p>
+<br>
+
+<br>
+
+<br>
+
+<h2 id="Less里的注释"><a href="#Less里的注释" class="headerlink" title="Less里的注释"></a>Less里的注释</h2><p>以**//开头**的注释，不会被编译到CSS里</p>
+<p>以**/* */包裹**的注释会被编译到CSS里</p>
+<p><br><br><br><br><br></p>
+<h2 id="使用Less的方式"><a href="#使用Less的方式" class="headerlink" title="使用Less的方式"></a>使用Less的方式</h2><ol>
+<li><p><code>使用npm安装</code>/命令行用法</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g less</span><br></pre></td></tr></table></figure></li>
+<li><p><code>引入式</code>/浏览器端用法（引入文件不符合预编辑的理念，不推荐）</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;less.js&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p><code>编辑器插件</code>（<strong>推荐</strong>）</p>
+<p> VScode里的 Easy LESS插件（保存Less时自动生成CSS文件）</p>
+<p> <strong>注意</strong>：要在HTML里引入 自动生成的CSS文件。</p>
+</li>
+<li><p>在项目中使用打包工具（webpack,gulp）</p>
+</li>
+</ol>
+<p><br><br><br><br><br></p>
+<h2 id="Less功能"><a href="#Less功能" class="headerlink" title="Less功能"></a>Less功能</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 布局</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">header</span>&gt;</span><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">section</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">footer</span>&gt;</span><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><br><br>### 1.变量</p>
+<br>
+
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background</span>: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 把常用的颜色，大小等设为变量，统一修改，我们就可以快速改变页面的主题，风格。</span></span><br><span class="line"><span class="variable">@width:</span> <span class="number">200px</span>;			</span><br><span class="line"><span class="variable">@color:</span> lightblue;</span><br><span class="line"><span class="variable">@m:</span> margin;</span><br><span class="line"><span class="variable">@selector:</span> footer;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="variable">@width</span>; </span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="variable">@color</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">@&#123;selector&#125;</span>&#123;			<span class="comment">// 把选择器与属性设为变量时要用&#123;&#125;包裹</span></span><br><span class="line">    @&#123;m&#125;: <span class="selector-tag">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p>作为URL: @{url}</p>
+<p><strong>注意</strong>： Less里的变量均为块级作用域</p>
+<p><br><br><br><br> </p>
+<h4 id="Less变量的延迟加载问题"><a href="#Less变量的延迟加载问题" class="headerlink" title="Less变量的延迟加载问题"></a>Less变量的延迟加载问题</h4><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@var:</span> <span class="number">0</span>;</span><br><span class="line"><span class="selector-class">.class</span> &#123;</span><br><span class="line">    <span class="variable">@var:</span> <span class="number">1</span>;</span><br><span class="line">    <span class="selector-class">.brass</span> &#123;</span><br><span class="line">        <span class="variable">@var:</span> <span class="number">2</span>;</span><br><span class="line">        three: @var;		<span class="comment">//3</span></span><br><span class="line">        <span class="variable">@var:</span> <span class="number">3</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    one: @var;				<span class="comment">// 1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>Less会把一个块的内容全部加载后，赋值。</code></p>
+<p><br><br><br><br><br><br></p>
+<h3 id="2-嵌套"><a href="#2-嵌套" class="headerlink" title="2.嵌套"></a>2.嵌套</h3><br>
+
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> <span class="selector-tag">header</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">    <span class="selector-tag">header</span>&#123;</span><br><span class="line">        <span class="attribute">color</span>:  pink;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><br><br><br><br><br></p>
+<h3 id="3-伪类"><a href="#3-伪类" class="headerlink" title="3.伪类"></a>3.伪类</h3><br>
+
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">section</span>&#123;    <span class="attribute">height</span>: <span class="number">200px</span>;    <span class="attribute">width</span>: <span class="number">200px</span>;    <span class="attribute">background</span>: lightblue;    <span class="selector-tag">&amp;</span><span class="selector-pseudo">:hover</span>&#123;				<span class="comment">// 伪元素     &amp;为父选择器（指section）        background: lightyellow;    &#125;    &amp;::before&#123;					// 伪类        content: &#x27;&#x27;;            &#125;    &amp;:nth-child(2)&#123;					// 平级        width: 50px;        height: 50px;    &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><br><br><br><br><br></p>
+<h3 id="4-媒体查询"><a href="#4-媒体查询" class="headerlink" title="4.媒体查询"></a>4.媒体查询</h3><br>
+
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;    <span class="selector-tag">header</span>&#123;        <span class="attribute">color</span>: ;    &#125;    <span class="selector-tag">section</span>&#123;    <span class="attribute">height</span>: <span class="number">200px</span>;    <span class="attribute">width</span>: <span class="number">200px</span>;    <span class="attribute">background</span>: lightblue;        <span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">500px</span>)&#123;            <span class="attribute">background</span>: grey;        &#125;&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><br><br><br><br></p>
+<h3 id="5-混合（mix-in-）"><a href="#5-混合（mix-in-）" class="headerlink" title="5.混合（mix in ）"></a>5.混合（mix in ）</h3><p>当界面的结构不再单一，我们就可能会用到<code>混合模式</code>（冗余代码抽离出来）</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不带（）就是普通的混合会被编译到CSS里.pinkthem()&#123;				// 抽离出代码，减少冗余    width: 200px;    height: 200px;    color: pink;    &#125;.container&#123;    header&#123;        .pinktheme()；			//括号一定要有，防止被css编译到代码内。    &#125;    footer&#123;        .pinktheme()；    &#125;    &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong>用法上和函数相似，但本质 不是函数。</p>
+<p><br><br><br><br></p>
+<h4 id="5-1带参数的混合"><a href="#5-1带参数的混合" class="headerlink" title="5.1带参数的混合"></a>5.1带参数的混合</h4><p>虽然代码冗余减少了，但有时可能不想全部应用，这种混合就少了一点灵活性，这时候就要用参数来控制 。</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.pinktheme</span>(<span class="variable">@w</span>,<span class="variable">@h</span>,<span class="variable">@c</span>)&#123;    <span class="attribute">width</span>: <span class="variable">@w</span>;    <span class="attribute">height</span>: <span class="variable">@h</span>;    <span class="attribute">color</span>: <span class="variable">@c</span>&#125;<span class="selector-class">.container</span>&#123;    <span class="selector-tag">header</span>&#123;        <span class="selector-class">.pinktheme</span>(<span class="number">200px</span>,<span class="number">300px</span>, pink)；				<span class="comment">// 传参    &#125;    footer&#123;        .pinktheme(100px, 200px, lightpink)；    &#125;    &#125;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p>传的参数个数要求一一对应的，不可少参，但是我们可以使用默认值来避免传参，只在特别修改的地方修改参数。</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.pinktheme</span>(<span class="variable">@w</span>:<span class="number">200px</span>,<span class="variable">@h</span>:<span class="number">200px</span>,<span class="variable">@c</span>:pink)&#123;    <span class="attribute">width</span>: <span class="variable">@w</span>;    <span class="attribute">height</span>: <span class="variable">@h</span>;    <span class="attribute">color</span>: <span class="variable">@c</span>&#125;<span class="selector-class">.container</span>&#123;    <span class="selector-tag">footer</span>&#123;        <span class="selector-class">.pinktheme</span>(<span class="number">100px</span>)；		<span class="comment">// 只修改宽度，别的默认    &#125;    header&#123;        .pinktheme(@c:pink)；				// 命名参数    &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><br><br><br><br><br></p>
+<h4 id="5-2匹配模式"><a href="#5-2匹配模式" class="headerlink" title="5.2匹配模式"></a>5.2匹配模式</h4><p>之前我们学过把代码抽离出去，到了后期抽离的代码块越来越多，就会影响我们less编写，所以我们没抽离出的代码一起放在<strong>别的less</strong>文件。</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 新建的名叫themes的less文件.pinktheme(P1,@w:200px,@h:200px,@c:pink)&#123;		// P1就是模式    width: @w;    height: @h;    color: @c&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<br>
+
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 原文件@import &quot;themes&quot;;			// import引入文件，注意有分号        .container&#123;    footer&#123;        .pinktheme(P1,100px)；				// 如果我们pinktheme有多个版本就可以选择模式    &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>这种写法适用于多个代码块有大部分冗余，我们每次只修改一两个属性，如我们在界面上画图形每个代码块只有三个形的方向的代码不同，我们建立不同模式，再把每个模式内相同的代码再一次抽离出去，实现减少冗余 。</p>
+<p>例如：我们有两个pinktheme模式但我们只是颜色上有一点 不同。</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// themes文件.wh(@w:200px,@h:200px)&#123;			// 再抽离    width: @w;    height: @h;&#125;.pinktheme(P1,@c:pink)&#123;		// P1模式	.wh();    color: @c;&#125;.pinktheme(P2,@c:lightpink&#123;		// P2模式 只有color不一样	.wh();    color: @c;&#125;// 原文件@import &quot;themes&quot;;        .container&#123;    footer&#123;        .pinktheme(P1)；	     header&#123;        .pinktheme(P2)；				    &#125;    &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果我们不用匹配模式，用不同的代码块抽离，就会多出不少相似的代码块（.pinktheme,.lightpinktheme）。</p>
+<p>在调用上还可以写成这种</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// themes文件.pinktheme(@w:200px,@h:200px)&#123;			// 使用同名    width: @w;    height: @h;&#125;.pinktheme(P1,@c:pink)&#123;		// P1模式    color: @c&#125;.pinktheme(P2,@c:lightpink&#123;		// P2模式 只有color不一样    color: @c&#125;// 原文件@import &quot;themes&quot;;        .container&#123;    footer&#123;        .pinktheme();			// 这种上面代码是减少，但要调用两个，写法随自己喜好了这个。          .pinktheme(P1)；	     header&#123;         .pinktheme();        .pinktheme(P2)；				    &#125;    &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>最终进阶</code>:调用两次是不是还有有个麻烦，还可以优化</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// themes文件.pinktheme(@_)&#123;			// 使用@_,每次调用时自动执行    width: 200px;    height: 200px;&#125;.pinktheme(P1,@c:pink)&#123;	    color: @c&#125;.pinktheme(P2,@c:lightpink&#123;	    color: @c&#125;// 原文件@import &quot;themes&quot;;        .container&#123;    footer&#123;		         .pinktheme(P1)；			//  只调用一次     header&#123;        .pinktheme(P2)；				    &#125;    &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><br><br><br><br><br><br></p>
+<h4 id="5-3arguments变量（非重点）"><a href="#5-3arguments变量（非重点）" class="headerlink" title="5.3arguments变量（非重点）"></a>5.3arguments变量（非重点）</h4><p>它是实参变量，伪数组。</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.border</span>(<span class="variable">@px</span>, <span class="variable">@style</span>,<span class="variable">@color</span>)&#123;    <span class="attribute">border</span>: <span class="variable">@arguments</span>;    &#125;<span class="selector-class">.container</span>&#123;    <span class="selector-class">.border</span>(<span class="number">1px</span> , solid, black);&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;    <span class="attribute">border</span>: <span class="number">1px</span>, solid, black;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<br>
+
+<p><br><br><br><br><br></p>
+<h3 id="6-Less计算"><a href="#6-Less计算" class="headerlink" title="6.Less计算"></a>6.Less计算</h3><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;    <span class="attribute">width</span>: (<span class="number">100</span>+<span class="number">100px</span>);				<span class="comment">// 只有一个单位就可以&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong>CSS里也有计算（通过cacl()计算，），但CSS内的直接计算会影响性能，建议使用less计算。</p>
+<p><br><br><br><br><br></p>
+<h3 id="7-继承-性能比混合高，灵活性没有混合强"><a href="#7-继承-性能比混合高，灵活性没有混合强" class="headerlink" title="7.继承(性能比混合高，灵活性没有混合强)"></a>7.继承(性能比混合高，灵活性没有混合强)</h3><p>使用混合可以大大减少我们less代码冗余，但是我们原生css内的代码量会变得冗长，这是我们不想见到的，这时混合就完成不了了，就有必要<code>了解继承</code>的用法。</p>
+<p><code>继承不可以传参</code>。</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// themes文件.pinktheme&#123;			// 没有括号它就不再是混合，而是一个类名    color: pink;		// 放公用的代码&#125;// 原文件@import &quot;themes&quot;;        .container&#123;        header:extend(.pinktheme)&#123;		// extend()是一个函数括号内加类名            width: 200px;			// 可能要改的代码    	height: 200px;        &#125;&#125;// 因为extend为同级也可以写成.container&#123;        header&#123;	            &amp;:extend(.pinktheme);            width: 200px;    	height: 200px;        &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.pinktheme</span>,						<span class="selector-class">.container</span> <span class="selector-tag">header</span> &#123;  <span class="attribute">color</span>: pink;&#125;<span class="selector-class">.container</span> <span class="selector-tag">header</span> &#123;  <span class="attribute">width</span>: <span class="number">200px</span>;  <span class="attribute">height</span>: <span class="number">200px</span>;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>当需要继承全部状态时</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// themes.pinktheme&#123;    color: pink;    &amp;:hover&#123;			// 有状态        background: grey;    &#125;&#125;// 原文件.container&#123;        header&#123;	            &amp;:extend(.pinktheme all);			// 全部继承            width: 200px;    	height: 200px;        &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><br><br><br><br><br></p>
+<h3 id="8-避免编译"><a href="#8-避免编译" class="headerlink" title="8.避免编译"></a>8.避免编译</h3><p>使用**~””**,引号内包裹的less代码会被避免编译，如是计算，由浏览器计算。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">穿雲月</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://crosscloudmoon.github.io/2021/06/22/Less/">http://crosscloudmoon.github.io/2021/06/22/Less/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://crosscloudmoon.github.io" target="_blank">I'm coding</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Less/">Less</a><a class="post-meta__tags" href="/tags/Node/">Node</a></div><div class="post_share"><div class="social-share" data-image="https://t1.picb.cc/uploads/2021/06/13/w6vw2c.png" data-sites="facebook,twitter,wechat,weibo,qq http://www.baibu.com"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2021/06/22/Vim/"><img class="next-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://t1.picb.cc/uploads/2021/06/13/w6ve77.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">最强的文本编辑器Vim，其实也没有怎么难！|入门教程|</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/06/22/Vim/" title="最强的文本编辑器Vim，其实也没有怎么难！|入门教程|"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://t1.picb.cc/uploads/2021/06/13/w6ve77.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-22</div><div class="title">最强的文本编辑器Vim，其实也没有怎么难！|入门教程|</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://t1.picb.cc/uploads/2021/05/25/wJ8LL7.th.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">穿雲月</div><div class="author-info__description">My blog, my kingdom</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/crosscloudmoon"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/crosscloudmoon" target="_blank" title="Github"><i class="fab fa-github"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">Code, meet to you!</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%A6%E4%BC%9A%E4%BD%BF%E7%94%A8Less%EF%BC%8C%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87UP-%E7%AC%94%E8%AE%B0-%E6%95%99%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">学会使用Less，工作效率UP|笔记|教程|</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Less%E9%87%8C%E7%9A%84%E6%B3%A8%E9%87%8A"><span class="toc-number">1.1.</span> <span class="toc-text">Less里的注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8Less%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">使用Less的方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Less%E5%8A%9F%E8%83%BD"><span class="toc-number">1.3.</span> <span class="toc-text">Less功能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Less%E5%8F%98%E9%87%8F%E7%9A%84%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD%E9%97%AE%E9%A2%98"><span class="toc-number">1.3.0.1.</span> <span class="toc-text">Less变量的延迟加载问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%B5%8C%E5%A5%97"><span class="toc-number">1.3.1.</span> <span class="toc-text">2.嵌套</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BC%AA%E7%B1%BB"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.伪类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.3.3.</span> <span class="toc-text">4.媒体查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%B7%B7%E5%90%88%EF%BC%88mix-in-%EF%BC%89"><span class="toc-number">1.3.4.</span> <span class="toc-text">5.混合（mix in ）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1%E5%B8%A6%E5%8F%82%E6%95%B0%E7%9A%84%E6%B7%B7%E5%90%88"><span class="toc-number">1.3.4.1.</span> <span class="toc-text">5.1带参数的混合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2%E5%8C%B9%E9%85%8D%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.3.4.2.</span> <span class="toc-text">5.2匹配模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-3arguments%E5%8F%98%E9%87%8F%EF%BC%88%E9%9D%9E%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-number">1.3.4.3.</span> <span class="toc-text">5.3arguments变量（非重点）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Less%E8%AE%A1%E7%AE%97"><span class="toc-number">1.3.5.</span> <span class="toc-text">6.Less计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E7%BB%A7%E6%89%BF-%E6%80%A7%E8%83%BD%E6%AF%94%E6%B7%B7%E5%90%88%E9%AB%98%EF%BC%8C%E7%81%B5%E6%B4%BB%E6%80%A7%E6%B2%A1%E6%9C%89%E6%B7%B7%E5%90%88%E5%BC%BA"><span class="toc-number">1.3.6.</span> <span class="toc-text">7.继承(性能比混合高，灵活性没有混合强)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E9%81%BF%E5%85%8D%E7%BC%96%E8%AF%91"><span class="toc-number">1.3.7.</span> <span class="toc-text">8.避免编译</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/06/22/Less/" title="学会使用Less，工作效率UP|笔记|教程|"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://t1.picb.cc/uploads/2021/06/13/w6vw2c.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="学会使用Less，工作效率UP|笔记|教程|"/></a><div class="content"><a class="title" href="/2021/06/22/Less/" title="学会使用Less，工作效率UP|笔记|教程|">学会使用Less，工作效率UP|笔记|教程|</a><time datetime="2021-06-22T02:05:56.000Z" title="发表于 2021-06-22 10:05:56">2021-06-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/22/Vim/" title="最强的文本编辑器Vim，其实也没有怎么难！|入门教程|"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://t1.picb.cc/uploads/2021/06/13/w6ve77.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="最强的文本编辑器Vim，其实也没有怎么难！|入门教程|"/></a><div class="content"><a class="title" href="/2021/06/22/Vim/" title="最强的文本编辑器Vim，其实也没有怎么难！|入门教程|">最强的文本编辑器Vim，其实也没有怎么难！|入门教程|</a><time datetime="2021-06-22T01:36:36.000Z" title="发表于 2021-06-22 09:36:36">2021-06-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/" title="如何为Typora换肤！|教程|"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://t1.picb.cc/uploads/2021/06/01/wk5eKL.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何为Typora换肤！|教程|"/></a><div class="content"><a class="title" href="/2021/06/15/%E5%A6%82%E4%BD%95%E4%B8%BATypora%E6%8D%A2%E8%82%A4%EF%BC%81-%E6%95%99%E7%A8%8B/" title="如何为Typora换肤！|教程|">如何为Typora换肤！|教程|</a><time datetime="2021-06-15T12:24:57.000Z" title="发表于 2021-06-15 20:24:57">2021-06-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/13/%E5%85%B3%E4%BA%8E%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E5%AE%9E%E6%97%B6%E9%A2%84%E8%A7%88%EF%BC%8C%E6%B8%B2%E6%9F%93hexo%E6%A1%86%E6%9E%B6/" title="关于实现博客本地实时预览，渲染|hexo框架|"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://t1.picb.cc/uploads/2021/06/13/w6vrE0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于实现博客本地实时预览，渲染|hexo框架|"/></a><div class="content"><a class="title" href="/2021/06/13/%E5%85%B3%E4%BA%8E%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E5%AE%9E%E6%97%B6%E9%A2%84%E8%A7%88%EF%BC%8C%E6%B8%B2%E6%9F%93hexo%E6%A1%86%E6%9E%B6/" title="关于实现博客本地实时预览，渲染|hexo框架|">关于实现博客本地实时预览，渲染|hexo框架|</a><time datetime="2021-06-13T07:18:58.330Z" title="发表于 2021-06-13 15:18:58">2021-06-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/04/demo/" title="demo"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://t1.picb.cc/uploads/2021/06/01/wk5eKL.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="demo"/></a><div class="content"><a class="title" href="/2021/06/04/demo/" title="demo">demo</a><time datetime="2021-06-04T04:10:43.000Z" title="发表于 2021-06-04 12:10:43">2021-06-04</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 穿雲月</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">生命不熄，代码不止</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script src="http://qu63zmqgg.hb-bkt.clouddn.com/qu63zmqgg.hb-bkt.clouddn.com/js/diy.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="true" data-text="HTML5,CSS3,Javascript,PHP,Mysql,Bootstrap,Jquery,VUe,React,Ajex,Vue,React,Web,W3C,div,UI,Photoshop,json,dom,linux,chrome,node,www,MVC,github,less,git,mac" data-fontsize="20px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

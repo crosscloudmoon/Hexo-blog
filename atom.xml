@@ -76,11 +76,11 @@
   </entry>
   
   <entry>
-    <title>Bootstrap</title>
+    <title>快速入门Bootstrap</title>
     <link href="http://crosscloudmoon.github.io/2021/06/22/Bootstrap/"/>
     <id>http://crosscloudmoon.github.io/2021/06/22/Bootstrap/</id>
     <published>2021-06-22T06:11:13.000Z</published>
-    <updated>2021-07-05T11:49:18.568Z</updated>
+    <updated>2021-07-05T11:51:05.993Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h1><br><h2 id="1-安装与使用"><a href="#1-安装与使用" class="headerlink" title="1.安装与使用"></a>1.安装与使用</h2><p><a href="https://www.bootcss.com/">中文网  https://www.bootcss.com/</a></p><p>我们这里使用Bootstrap3</p><p><br><br><br></p><p><code>特点</code>： </p><ol><li>简洁，直观 ，强悍的前端开发框架</li><li>响应式设计，12列网格。</li><li>Bootstrap3基于Less,Bootstrap4 基于Sassc预处理技术。</li><li>丰富的组件提供</li></ol><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>下载： <a href="https://v3.bootcss.com/getting-started/#download">https://v3.bootcss.com/getting-started/#download</a></p><br><p><code>生产版本</code>：可以用于快速开发，功能少</p><p><code>源码</code>： 用于学习，功能全（我们下这个）</p><p>之后需要把dist/css/bootstrap.min.css文件引入到css中(min就是压缩版，上线时代码会压缩在一起，体积小，如想看源码可以使用没有min的)</p><p>dist/js/bootstrap.min.js文件引入到js中</p><p><code>下载后的文件我们不是都会使用，可以只把dist文件夹拷贝到我们的项目下</code></p><p>如果需要使用组件还需要下载jquery.js</p><p><strong>注意：</strong> 引入时要先引入 jquery，虽然bootstrap是依靠于jquery.</p><p><br><br><br><br><br><br></p><h2 id="2-布局容器与栅格网络系统"><a href="#2-布局容器与栅格网络系统" class="headerlink" title="2.布局容器与栅格网络系统"></a>2.布局容器与栅格网络系统</h2><p>bootstarp提供了两种布局</p><ol><li>​    .container类,固定宽度，两边有留白的响应式布局容器（<code>推荐</code>）</li></ol><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><br><ol start="2"><li>​    .container-fluid类，100%宽度，全屏幕式布局（不常用）</li></ol><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container-fluid&quot;</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><p><br><br><br><br></p><h3 id="栅格网络系统"><a href="#栅格网络系统" class="headerlink" title="栅格网络系统"></a>栅格网络系统</h3><p>Bootstrap提供了一套<code>响应式，移动设备优先的流式栅格系统</code>，随着<em>屏幕或视口</em>的尺寸的变化 ，系统自动分为<strong>12列</strong>。栅格系统通过<code>行（row）列（column)</code>的组合来创建页面布局，你的内容就可以放入这些创建的布局中。</p><p>原理说白了就是，把页面分为12份（通常是，也可以分为32或24），我们通过决定每个容器占有几份来控制我们的页面。</p><p><code>屏幕尺寸</code>：</p><p>xs: 超小屏（自动）</p><p>sm: 小屏（750px）</p><p>md: 中屏(970px)</p><p>lg: 大屏(1170px)</p><p><strong>注意：</strong>数据行（.row）一定要放在容器（.container）中，以便为其合适的对齐方式和内距（padding）。</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-md-4&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-md-8&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -135,9 +135,9 @@
     
     
     
-    <category term="Node" scheme="http://crosscloudmoon.github.io/tags/Node/"/>
-    
     <category term="Web" scheme="http://crosscloudmoon.github.io/tags/Web/"/>
+    
+    <category term="Node" scheme="http://crosscloudmoon.github.io/tags/Node/"/>
     
   </entry>
   
@@ -163,9 +163,9 @@
     <category term="Node" scheme="http://crosscloudmoon.github.io/categories/web%E5%89%8D%E7%AB%AF/Node/"/>
     
     
-    <category term="Less" scheme="http://crosscloudmoon.github.io/tags/Less/"/>
-    
     <category term="Node" scheme="http://crosscloudmoon.github.io/tags/Node/"/>
+    
+    <category term="Less" scheme="http://crosscloudmoon.github.io/tags/Less/"/>
     
   </entry>
   

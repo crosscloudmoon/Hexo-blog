@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://crosscloudmoon.github.io/2021/06/22/Bootstrap/</loc>
+    
+    <lastmod>2021-07-05</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://crosscloudmoon.github.io/2021/07/05/React/</loc>
     
     <lastmod>2021-07-05</lastmod>
@@ -164,6 +171,20 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>http://crosscloudmoon.github.io/tags/Bootstrap/</loc>
+    <lastmod>2021-07-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://crosscloudmoon.github.io/tags/Note/</loc>
+    <lastmod>2021-07-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -189,6 +210,13 @@
   
   <url>
     <loc>http://crosscloudmoon.github.io/categories/Web/Node/</loc>
+    <lastmod>2021-07-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://crosscloudmoon.github.io/categories/Web/Note/</loc>
     <lastmod>2021-07-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
